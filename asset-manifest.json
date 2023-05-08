@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-random-quote-app/static/css/main.073c9b0a.css",
-    "main.js": "/react-random-quote-app/static/js/main.f926cf9e.js",
+    "main.css": "/react-random-quote-app/static/css/main.f3d17a2d.css",
+    "main.js": "/react-random-quote-app/static/js/main.58a9f96f.js",
     "static/js/787.36c7bec2.chunk.js": "/react-random-quote-app/static/js/787.36c7bec2.chunk.js",
     "index.html": "/react-random-quote-app/index.html",
-    "main.073c9b0a.css.map": "/react-random-quote-app/static/css/main.073c9b0a.css.map",
-    "main.f926cf9e.js.map": "/react-random-quote-app/static/js/main.f926cf9e.js.map",
+    "main.f3d17a2d.css.map": "/react-random-quote-app/static/css/main.f3d17a2d.css.map",
+    "main.58a9f96f.js.map": "/react-random-quote-app/static/js/main.58a9f96f.js.map",
     "787.36c7bec2.chunk.js.map": "/react-random-quote-app/static/js/787.36c7bec2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.f926cf9e.js"
+    "static/css/main.f3d17a2d.css",
+    "static/js/main.58a9f96f.js"
   ]
 }
