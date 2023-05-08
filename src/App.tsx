@@ -5,20 +5,9 @@ import TitleCard from './components/TitleCard';
 
 export interface Quote
 {
-	content: string
-	author: string
-}
-
-const style: React.CSSProperties = {
-	backgroundColor: "lightblue",
-	height: "100vh",
-	width: "100vw",
-	position: "absolute",
-	// top: "50%",
-	// transform: "translate(0px, -50%)"
-	// display: "flex",
-	// justifyContent: "center",
-	// alignItems: "center"
+	slip: {
+		advice: string
+	}
 }
 
 const btnStyleHover: React.CSSProperties = {
@@ -41,11 +30,10 @@ const btnStyleNormal: React.CSSProperties = {
 function App()
 {
 	const [data, setData] = React.useState<Quote>();
-	const [isHovering, setIsHovering] = React.useState<boolean>(false);
 	
 	const handleFetchNewQuote = async () =>
 	{
-		const endpoint = "https://api.quotable.io/random";
+		const endpoint = "https://api.adviceslip.com/advice"; //"http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en&origin=*"; //"https://api.quotable.io/random";
 		await fetch(endpoint).then(response => response.json()).then((data) => setData(data as Quote)).then((log) => console.log(log)).catch(error => console.log(error));
 	}
 	
@@ -54,11 +42,10 @@ function App()
 	}, []);
 	
 	return (
-		<div style={style} className="App">
-			
+		<div className="App bg-blue-300 h-full w-full absolute">
 			<TitleCard/>
-			{data && <QuoteCard content={data.content} author={data.author}/>}
-			<button style={!isHovering ? btnStyleHover : btnStyleNormal} onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)} onClick={handleFetchNewQuote}>Motivate Me</button>
+			{data && <QuoteCard slip={data.slip}  />}
+			<button className='p-2 sm:text-sm md:text-base bg-black text-white border-solid rounded-[55px] top-3/4 -translate-x-1/2 hover:translate-y-1 absolute cursor-pointer hover:shadow-[0_3px_5px_1px_rgb(17,24,39)] shadow-lg shadow-gray-900' onClick={handleFetchNewQuote}>Click to fetch new advice</button>		
 		</div>
 	);
 }

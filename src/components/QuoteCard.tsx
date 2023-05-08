@@ -1,35 +1,10 @@
 import React from "react";
 import { Quote } from "../App";
 
-const divStyle: React.CSSProperties = {
-	width: "75%",
-	backgroundColor: "darkblue",
-	borderStyle: "solid",
-	borderRadius: "55px",
-	transform: "translate(0px, 25vh)",
-	boxShadow: "7px 7px 5px gray"
-};
-
-const h1Style: React.CSSProperties = {
-	width: "50%",
-	color: "white",
-	textAlign: "left",
-};
-
-const pStyle: React.CSSProperties = {
-	width: "15%",
-	color: "silver",
-	borderStyle: "solid",
-	borderRadius: "55px"
-};
-
-const QuoteCard = ({ content, author }: Quote) => (
-	<center>
-		<div style={divStyle}>
-			<h1 style={h1Style}>{content}</h1>	
-			<p style={pStyle}>- {author}</p>
-		</div>
-	</center>
+const QuoteCard = ({ slip }: Quote) => (
+	<div className="bg-blue-800 border-solid rounded-[55px] top-1/2 md:top-[45%] left-1/2 absolute -translate-x-1/2 shadow-lg shadow-gray-900">
+		<p className="p-2 sm:text-base md:text-4xl text-zinc-100 border-solid rounded-[55px]">{slip.advice}</p>
+	</div>
 );
 
 export default QuoteCard;
