@@ -10,23 +10,6 @@ export interface Quote
 	}
 }
 
-const btnStyleHover: React.CSSProperties = {
-	borderStyle: "solid",
-	borderRadius: "55px",
-	position: "relative",
-	transform: "translate(0px, 27vh)",
-	cursor: "pointer",
-	boxShadow: "3px 3px 5px gray"
-}
-
-const btnStyleNormal: React.CSSProperties = {
-	borderStyle: "solid",
-	borderRadius: "55px",
-	position: "relative",
-	transform: "translate(1px, 27.1vh)",
-	cursor: "pointer"
-}
-
 function App()
 {
 	const [data, setData] = React.useState<Quote>();
@@ -45,7 +28,7 @@ function App()
 		<div className="App bg-blue-300 h-full w-full absolute">
 			<TitleCard/>
 			{data && <QuoteCard slip={data.slip}  />}
-			<button className='p-2 sm:text-sm md:text-base bg-black text-white border-solid rounded-[55px] top-3/4 -translate-x-1/2 hover:translate-y-1 absolute cursor-pointer hover:shadow-[0_3px_5px_1px_rgb(17,24,39)] shadow-lg shadow-gray-900' onClick={handleFetchNewQuote}>Click to fetch new advice</button>		
+			<button className='p-2 sm:text-sm md:text-base bg-black text-white border-solid rounded-[55px] sm:top-[85%] md:top-3/4 -translate-x-1/2 hover:translate-y-1 absolute cursor-pointer hover:shadow-[0_3px_5px_1px_rgb(17,24,39)] shadow-lg shadow-gray-900' onMouseUp={handleFetchNewQuote}>Click to fetch new advice</button>		
 		</div>
 	);
 }
