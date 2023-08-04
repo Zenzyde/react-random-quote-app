@@ -28,7 +28,7 @@ function App()
 		<div className="App bg-gradient-to-tr from-cyan-500 to-blue-300 h-full w-full absolute">
 			<TitleCard/>
 			{data && <QuoteCard slip={data.slip}  />}
-			<button className='p-2 sm:text-sm md:text-base bg-blue-600 text-white rounded-[55px] top-[85%] -translate-x-1/2 absolute cursor-pointer hover:bg-blue-700 active:bg-blue-800' onMouseUp={handleFetchNewQuote} onTouchEnd={handleFetchNewQuote} >Click to fetch new advice</button>		
+			<button className='p-2 sm:text-sm md:text-base bg-blue-600 text-white rounded-[55px] top-[85%] -translate-x-1/2 absolute cursor-pointer hover:bg-blue-700 active:bg-blue-800' onClick={() => handleFetchNewQuote()} onMouseDown={() => handleFetchNewQuote()} onTouchStart={() => handleFetchNewQuote()} onPointerEnter={() => handleFetchNewQuote()} >Click to fetch new advice</button>		
 		</div>
 	);
 }
